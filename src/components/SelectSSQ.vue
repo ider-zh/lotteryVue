@@ -242,12 +242,12 @@ export default {
       })
 
       //   添加后2期
-      if ([0, 2, 4].includes(moment().weekday())) {
-        qihaoOption.unshift({
-          value: String(Number(qihaoOption[0].value) + 2),
-          text: String(Number(qihaoOption[0].text) + 2)
-        })
-      }
+      //   if ([0, 2, 4].includes(moment().weekday())) {
+      qihaoOption.unshift({
+        value: String(Number(qihaoOption[0].value) + 1),
+        text: String(Number(qihaoOption[0].text) + 1)
+      })
+      //   }
 
       //   判断是否加入新一年的期号
       if (moment().dayOfYear() > 360) {
